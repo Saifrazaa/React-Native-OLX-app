@@ -26,7 +26,7 @@ export default class MotorBikes extends React.Component {
                                 <Card key={index} style={styles.cardStyle}>
                                     <CardItem cardBody>
                                         <View>
-                                            <Image style={styles.imageStyle} source={require("../../images/bikes/1.jpg")} />
+                                            <Image style={styles.imageStyle} source={{uri:card.imageUri}} />
                                             <Text style={{textAlign:"center"}}>{card.name}</Text>
                                             <Text style={{ color: "green",textAlign:"center" }}>{card.price}</Text>
                                         </View>

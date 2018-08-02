@@ -5,16 +5,16 @@ import {
   Text,
   View
 } from 'react-native';
-import { Container } from "native-base";
-import Main from "./components";
-import NavigationApp from "./routes";
+import { Container, Root } from "native-base";
+import Routes from "./routes";
 export default class App extends Component {
   render() {
     return (
-      <Container>
-        <Main />
-        {/* <NavigationApp /> */}
-      </Container>
+      <Root>
+        <Container>
+          <Routes />
+        </Container>
+      </Root>
     );
   }
 }

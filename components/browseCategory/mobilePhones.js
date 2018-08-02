@@ -8,7 +8,7 @@ export default class PropertyForSale extends React.Component {
         super();
         this.state = {
             property: [
-                { id: 1, name: "Bangla no 1", price: "RS 9,950,854", imageUri: "../../images/propertyforsale/1.jpg" },
+                { id: 1, name: "Bangla no 1", price: "RS 9,950,854", imageUri: "https://facebook.github.io/react-native/docs/assets/favicon.png" },
                 { id: 2, name: "Bangla no 2", price: "RS 9,784,021", imageUri: "../../images/propertyforsale/2.jpg" },
                 { id: 3, name: "Bangla no 3", price: "RS 6,125,784", imageUri: "../../images/propertyforsale/3.jpg" }
             ]
@@ -26,7 +26,7 @@ export default class PropertyForSale extends React.Component {
                                 <Card key={index} style={styles.cardStyle}>
                                     <CardItem cardBody>
                                         <View>
-                                            <Image style={styles.imageStyle} source={require("../../images/propertyforsale/1.jpg")} />
+                                            <Image style={styles.imageStyle} source={require(card.imageUri)} />
                                             <Text style={{textAlign:"center"}}>{card.name}</Text>
                                             <Text style={{ color: "green",textAlign:"center" }}>{card.price}</Text>
                                         </View>

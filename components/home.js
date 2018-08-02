@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Card, CardItem, Header, Left, Button } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Actions} from "react-native-router-flux";
 import { Text, Dimensions, View, StyleSheet,ScrollView } from "react-native";
 import BrowseCategory from "./browsecategory";
 const { height, width, fontScale } = Dimensions.get("window");
@@ -21,7 +22,7 @@ export default class Home extends React.Component {
                 <Card style={{ width: width / 1.05, marginLeft: 10 }}>
                     <CardItem>
                         <View style={{ flex: 1, flexDirection: "row" }}>
-                            <Button style={{ width: width / 5, height: height / 9.5 }} bordered light >
+                            <Button style={{ width: width / 5, height: height / 9.5 }} bordered light onPress={()=>Actions.push('mobiles')}>
                                 <View>
                                     <Icon style={{ fontSize: fontScale * 15, textAlign: "center", color: "purple" }} name="mobile" />
                                     <Text style={styles.categoryText}>Mobiles and Tablets</Text>
